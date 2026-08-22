@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Data
+data/tmdb_5000_credits.csv
+data/tmdb_5000_movies.csv
