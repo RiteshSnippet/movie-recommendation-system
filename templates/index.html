@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Movie Recommender</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Movie Recommender</h1>
+        <form method="POST" class="search-form">
+            <input type="text" name="title" placeholder="Type a movie name..." value="{{ searched_title or '' }}" autocomplete="off">
+            <button type="submit">Search</button>
+        </form>
+
+        {% if not_found %}
+            <p class="not-found">Movie not found. Try another title.</p>
+        {% endif %}
+
+        {% if recommendations %}
+            <h2>Because you liked "{{ searched_title }}"</h2>
+            <ul class="results">
+                {% for movie in recommendations %}
+                    <li>{{ movie }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>

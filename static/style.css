@@ -1,0 +1,89 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: #292725;
+    color: #FFF3E4;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    color: #FF6107;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #E9290F;
+    border-radius: 6px;
+    background-color: #3a3735;
+    color: #FFF3E4;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #FF6107;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #E9290F;
+    color: #FFF3E4;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #C40018;
+}
+
+h2 {
+    color: #FF6107;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.results {
+    list-style: none;
+}
+
+.results li {
+    background-color: #3a3735;
+    border-left: 4px solid #E9290F;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    transition: transform 0.15s;
+}
+
+.results li:hover {
+    transform: translateX(5px);
+    border-left-color: #FF6107;
+}
+
+.not-found {
+    color: #C40018;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
