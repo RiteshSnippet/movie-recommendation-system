@@ -220,3 +220,7 @@ __marimo__/
 # Data
 data/tmdb_5000_credits.csv
 data/tmdb_5000_movies.csv
+
+# Model
+movies.pkl
+similarity.pkl
